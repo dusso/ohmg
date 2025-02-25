@@ -1,0 +1,40 @@
+<h1>Editar Endereço</h1>
+
+<%= form_with model: @location, local: true do |form| %>
+  <% if @location.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@location.errors.count, "erro") %> proibiu este endereço de ser salvo:</h2>
+      <ul>
+        <% @location.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :street %>
+    <%= form.text_field :street %>
+  </div>
+
+  <div>
+    <%= form.label :number %>
+    <%= form.text_field :number %>
+  </div>
+
+  <div>
+    <%= form.label :npa %>
+    <%= form.text_field :npa %>
+  </div>
+
+  <div>
+    <%= form.label :canton %>
+    <%= form.text_field :canton %>
+  </div>
+
+  <div>
+    <%= form.submit 'Atualizar Endereço' %>
+  </div>
+<% end %>
+
+<%= link_to 'Voltar', locations_path %>

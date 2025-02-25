@@ -1,0 +1,9 @@
+<h1>Endereço</h1>
+
+<p><strong>Rua:</strong> <%= @location.street %></p>
+<p><strong>Número:</strong> <%= @location.number %></p>
+<p><strong>NPA:</strong> <%= @location.npa %></p>
+<p><strong>Cantão:</strong> <%= @location.canton %></p>
+
+<%= link_to 'Voltar', locations_path %> |
+<%= link_to 'Editar', edit_location_path(@location) %>

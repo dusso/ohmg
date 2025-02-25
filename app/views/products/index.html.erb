@@ -1,0 +1,13 @@
+<h1>INDEX DE PRODUTOS</h1>
+
+<ul>
+  <% @products.each do |product| %>
+    <li><%= product.name %> - <%= product.price %></li>
+  <% end %>
+</ul>
+
+<%#= form_with(url: change_locale_path, method: :post) do |form| %>
+  <%#= form.select :locale, [['Français', 'fr'], ['Deutsch', 'de'], ['Italiano', 'it']], {}, onchange: 'this.form.submit();' %>
+<%# end %>
+
+

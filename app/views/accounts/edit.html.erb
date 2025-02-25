@@ -1,0 +1,17 @@
+<h1>Editar Minha Conta</h1>
+
+<%= form_with model: current_user, url: account_path, method: :patch do |form| %>
+  <div>
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div>
+    <%= form.label :password %>
+    <%= form.password_field :password %>
+  </div>
+
+  <div>
+    <%= form.submit 'Salvar alterações' %>
+  </div>
+<% end %>

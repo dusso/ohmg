@@ -1,0 +1,13 @@
+<h1>Meus Endereços</h1>
+
+<%= link_to 'Adicionar Novo Endereço', new_location_path %>
+
+<ul>
+  <% @locations.each do |location| %>
+    <li>
+      <%= location.street %>, <%= location.number %> - <%= location.npa %> - <%= location.canton %>
+      <%= link_to 'Editar', edit_location_path(location) %> |
+      <%= link_to 'Excluir', location_path(location), method: :delete %>
+    </li>
+  <% end %>
+</ul>

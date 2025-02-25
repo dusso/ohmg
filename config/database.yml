@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: denisdusso
+  password: cherokee23
+  host: localhost
+
+development:
+  <<: *default
+  database: ohmg_development
+
+test:
+  <<: *default
+  database: ohmg_test
+
+production:
+  <<: *default
+  database: ohmg_production
+  username: ohmg
+  password: <%= ENV['OHMG_DATABASE_PASSWORD'] %>

@@ -1,0 +1,14 @@
+<h1>Mensagens</h1>
+
+<% if @messages.present? %>
+  <ul>
+    <% @messages.each do |message| %>
+      <li>
+        <%= link_to message.subject, message_path(message) %>
+        <%= link_to 'Excluir', message_path(message), method: :delete %>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>Você não tem mensagens.</p>
+<% end %>
