@@ -1,18 +1,16 @@
-<h1>HOME</h1>
+<%#= render  "components/header/main" %>
 
-<%= link_to 'Novo Anúncio', new_ad_path %>
+<%#= FAZENDO O HEADER %>
 
-<button class="_btn _green-fill">Clique Aqui</button>
+<%# top %>
+<div class="d-flex justify-content-between align-items-center px-0">
+  <%= render "components/shared/logo_md" %>
+  <div class="d-flex align-items-center justify-content-end">
+    <div class="_languages pe-3">
+  <%= render "components/shared/hamburguer_menu" %>
 
- 
- <!-- Botão Dropdown -->
-<div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-    Selecione uma opção
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <li><a class="dropdown-item" href="#">Opção 1</a></li>
-    <li><a class="dropdown-item" href="#">Opção 2</a></li>
-    <li><a class="dropdown-item" href="#">Opção 3</a></li>
-  </ul>
+      <%#= render "components/shared/languages" %>
+    </div>
+    <%#= render "components/user_login" %>
+  </div>
 </div>
