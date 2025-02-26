@@ -1,0 +1,313 @@
+//------------------------ variables -----------------------//
+
+$ease-in-out: all .15s ease-in-out;
+$ease-in-out: all .15s ease-in-out;
+
+$move-up: translateY(-1px);
+$move-left: translateX(-0.45em) !important;
+$move-right: translateX(0.45em) !important;
+
+$radius0: 0;
+$radius05: .5rem;
+$radius: 1rem;
+$radius2: 2rem;
+
+
+
+//----------------------------------------------------------//
+
+
+
+@mixin _body-btn {
+    @include _transition;
+    cursor: pointer;
+    display: inline-block;
+    background: none;
+    border: none;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 2rem;
+    padding: 0.5rem 0.9rem;
+    font-size: .9rem;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        @include _transition;
+    }
+}
+
+@mixin _body-badge {
+    display: inline-block;
+    vertical-align: baseline;
+    white-space: nowrap;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 1rem;
+    padding: .2em .65em;
+    font-size: .75rem;
+}
+
+@mixin btn-style($size-border, $border, $bg, $color, $box-shadow) {
+    border: $size-border solid $border;
+    background: $bg !important;
+    color: $color !important;
+    @include _bs-hover-buttons($box-shadow);
+
+    &:hover {
+        transform: $move-up;
+    }
+}
+
+@mixin badge-style($border, $bg, $color) {
+    background: $bg;
+    border: 1px solid $border;
+    color: $color !important;
+}
+
+@mixin _guide_input($color, $bg, $border, $radius, $box-shadow) {
+    @include _transition;
+    @include _border1($border);
+    @include _box-shadow($box-shadow);
+    color: $color;
+    background: $bg;
+    border-radius: $radius;
+    //box-shadow: 0px 0px 17px -1px $box-shadow;
+}
+
+@mixin _body-card($border-size, $border, $bg, $box-shadow) {
+    @include _transition;
+    @include _box-shadow($box-shadow);
+    border-radius: 1rem;
+    border: $border-size solid $border;
+    background: $bg;
+}
+
+@mixin _body-card-with-hover($border-size, $border, $bg, $box-shadow) {
+    @include _transition;
+    @include _box-shadow($box-shadow);
+    border-radius: 1rem;
+    border: $border-size solid $border;
+    background: $bg;
+
+    &:hover {
+        @include _body-card-hover($border-size, $border, $bg, $box-shadow);
+    }
+}
+
+@mixin _offcanvas-header($color, $bb, $bg, $box-shadow) {
+    i, h3 {
+        color: $color !important;
+    }
+    border-bottom: 1px solid $bb;
+    background: $bg;
+    box-shadow: $box-shadow; 
+}
+
+// for premium
+@mixin _hover-blue {
+    @include _body-card(2px, $white-page, $white, $blue-premium); //bg/border/shadow
+
+    &:hover {
+        @include _body-card(2px, $blue500, $white, $blue-premium-hover);
+    }
+}
+
+// for premium
+@mixin _hover-gold {
+    @include _body-card(2px, $gray900, $gray900, $black-premium); //bg/border/shadow
+
+    &:hover {
+        @include _body-card(2px, $gold, $gray900, $bs-dark-gold);
+    }
+}
+
+//for desktop
+@mixin _hover-gray {
+    @include _body-card(2px, $white-page, #F0F2F482, -1px 9px 14px -5px rgba(229, 229, 229, 0.8)); //bg/border/shadow
+
+    &:hover {
+        @include _body-card(2px, $blue500, $white, $blue-premium-hover);
+    }
+}
+
+//for mobile
+@mixin _hover-gray-sm {
+    @include _body-card(2px, $white-page, $white, -1px 9px 14px -5px rgba(229, 229, 229, 0.8)); //border/bg/shadow
+
+    &:hover {
+        @include _body-card(2px, $blue500, $white, 0px 0px 24px 10px #c9c9c9);
+    }
+}
+
+
+@mixin _nav-link($bg, $color, $border) {
+    background: $bg;
+    color: $color;
+    border-bottom: 3px solid $border;
+}
+
+@mixin _nav-link-mobile($bg, $color, $border) {
+    background: $bg;
+    color: $color;
+    border: 1px solid $border;
+    border-radius: 1rem;
+}
+
+
+
+//------------------------ Easy mixing area -----------------------//
+
+
+
+@mixin _transition {
+    transition: $ease-in-out;
+    moz-transition: $ease-in-out;
+    -o-transition: $ease-in-out;
+    -webkit-transition: $ease-in-out;
+}
+
+@mixin _border($size, $border) {
+    border: $size solid $border !important;
+}
+
+@mixin _border1($border) {
+    border: 1px solid $border;
+}
+
+@mixin _border2($border) {
+    border: 2px solid $border !important;
+}
+
+@mixin _border3($border) {
+    border: 3px solid $border;
+}
+
+@mixin _border-bottom-3($border) {
+    border-bottom: 3px solid $border !important;
+}
+
+// fx 
+@mixin _transformY($move-up) {
+    transform: $move-up;
+}
+
+@mixin _scale {
+    transform: scale(1.01);
+}
+
+@mixin _move-left($move-left) {
+    transform: $move-left;
+}
+
+@mixin _move-right($move-right) {
+    transform: $move-right;
+}
+
+@mixin _size($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin _size-min($width, $height) {
+    min-width: $width;
+    height: $height;
+}
+
+@mixin _box-shadow($box-shadow) {
+    box-shadow: $box-shadow;
+    moz-box-shadow: $box-shadow;
+    -o-box-shadow: $box-shadow;
+    -webkit-box-shadow: $box-shadow;
+}
+
+@mixin _bs-hover($box-shadow) {
+    box-shadow: -1px 14px 23px -3px $box-shadow;
+    moz-box-shadow: -1px 14px 23px -3px $box-shadow;
+    -o-box-shadow: -1px 14px 23px -3px $box-shadow;
+    -webkit-box-shadow: -1px 14px 23px -3px $box-shadow;
+}
+
+@mixin _bs-hover-buttons($box-shadow) {
+    box-shadow: 0 15px 12px -12px $box-shadow;
+    moz-box-shadow: 0 15px 12px -12px $box-shadow;
+    -o-box-shadow: 0 15px 12px -12px $box-shadow;
+    -webkit-box-shadow: 0 15px 12px -12px $box-shadow;
+}
+
+@mixin _body-card-hover($border-size, $border, $bg, $box-shadow) {
+    border: $border-size solid $border;
+    background: $bg;
+    box-shadow: $box-shadow;
+}
+
+
+
+//------------------------ btn link - mixing -----------------------//
+
+
+
+@mixin _black-link {
+    @include btn-style(1px, transparent, transparent, $black, none);
+
+    a {
+        color: $black !important;
+    }
+
+    &:hover {
+        @include btn-style(1px, transparent, transparent, $blue, none);
+        transform: none !important;
+    }
+}
+
+@mixin _blue-link {
+    @include btn-style(1px, transparent, transparent, $blue, none);
+
+    a {
+        color: $blue !important;
+    }
+
+    &:hover {
+        @include btn-style(1px, transparent, transparent, $blue-dark, none);
+        transform: none !important;
+    }
+}
+
+@mixin _gold-link {
+    @include btn-style(1px, transparent, transparent, $gold, none);
+
+    a {
+        color: $gold !important;
+    }
+
+    &:hover {
+        @include btn-style(1px, transparent, transparent, $gold100, none);
+        transform: none !important;
+    }
+}
+
+@mixin _grad-orange {
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include btn-style(2px, $orange, $gradient-orange, $white, none);
+
+    &:hover {
+        @include btn-style(2px, $orange-dark, $gradient-orange, $white, $bs-orange);
+        transform: none !important;
+    }
+}
+
+@mixin _grad-gold {
+    @include btn-style(2px, none, $gradient-gold, $black, none);
+
+    &:hover {
+        @include btn-style(2px, none, $gradient-gold, $black, $bs-dark-gold);
+        transform: none !important;
+    }
+}

@@ -1,4 +1,9 @@
-//@import "bootstrap";
-//@import 'bootstrap-icons/font/bootstrap-icons';
+//@import 'bootstrap-icons/font/bootstrap-icons';  // Pode ser importado diretamente no HTML se necessário
 
-@import 'bootstrap/scss/bootstrap';
+@import "bootstrap/scss/bootstrap";
+@import "components/colors";         // Primeiro, importa as cores (evita erros nas variáveis dos mixins)
+@import "components/mixins";         // Depois, importa os mixins (agora já tem as variáveis disponíveis)
+@import "components/styles";         // Depois, os estilos gerais
+@import "components/buttons";        // Agora, os botões
+//@import "components/bootstrap_variables"; (se necessário)
+//@import "components/fonts";
