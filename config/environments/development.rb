@@ -37,9 +37,21 @@ Rails.application.configure do
   config.active_storage.service = :local
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true  # Agora envia erros de entrega de e-mail
 
   config.action_mailer.perform_caching = false
+
+  # Configuração do Action Mailer para enviar e-mails usando o Gmail para teste
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address: 'smtp.gmail.com',
+    port: 587,
+    domain: 'gmail.com',
+    user_name: 'dddusso@gmail.com',  # Substitua com seu e-mail para teste
+    password: 'cherokee23',  # Substitua com sua senha para teste
+    authentication: 'plain',
+    enable_starttls_auto: true
+  }
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log

@@ -10,13 +10,13 @@ Rails.application.routes.draw do
   resource :account, only: [:show, :edit, :update]
 
   # Ads (Anúncios)
-  resources :ads, only: [:index, :new, :create, :edit, :update, :destroy] do
+  resources :ads, only: [:index, :show, :new, :create, :edit, :update, :destroy] do
     member do
-      get 'review', to: 'ads#review'
-      put 'publish', to: 'ads#publish'
-      put 'deactivate', to: 'ads#deactivate'
-      post 'add_image', to: 'ads#add_image'
-      patch 'sort_images', to: 'ads#sort_images'
+      get 'review',          to: 'ads#review'
+      put 'publish',         to: 'ads#publish'
+      put 'deactivate',      to: 'ads#deactivate'
+      post 'add_image',      to: 'ads#add_image'
+      patch 'sort_images',   to: 'ads#sort_images'
       delete 'remove_image', to: 'ads#remove_image'
     end
   end
@@ -37,15 +37,15 @@ Rails.application.routes.draw do
   post 'change_locale', to: 'application#change_locale'
 
   # Páginas estáticas (Help, Rules, Terms, Conditions)
-  get 'help', to: 'pages#help'
-  get 'rules', to: 'pages#rules'
-  get 'terms', to: 'pages#terms'
+  get 'help',       to: 'pages#help'
+  get 'rules',      to: 'pages#rules'
+  get 'terms',      to: 'pages#terms'
   get 'conditions', to: 'pages#conditions'
 
   # Ajustando rotas de locations que eram conflitantes
   # Agora essas rotas são explicitamente definidas fora de 'resources :locations'
-  get '/locations/new', to: 'locations#new', as: :new_location
-  post '/locations', to: 'locations#create', as: :create_location
-  patch '/locations/:id', to: 'locations#update', as: :update_location
+  get '/locations/new',    to: 'locations#new', as: :new_location
+  post '/locations',       to: 'locations#create', as: :create_location
+  patch '/locations/:id',  to: 'locations#update', as: :update_location
   delete '/locations/:id', to: 'locations#destroy', as: :destroy_location
 end

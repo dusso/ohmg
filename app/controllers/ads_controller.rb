@@ -2,7 +2,7 @@ class AdsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
   def index
-    @ads = Ad.all  # Certifique-se de que você tem o modelo Ad e ele está carregando os anúncios
+    @ads = Ad.all
   end
 
   def show
@@ -18,7 +18,7 @@ class AdsController < ApplicationController
     if @ad.save
       redirect_to @ad, notice: 'Anúncio criado com sucesso.'
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 
@@ -31,7 +31,7 @@ class AdsController < ApplicationController
     if @ad.update(ad_params)
       redirect_to @ad, notice: 'Anúncio atualizado com sucesso.'
     else
-      render :edit
+      render :edit, status: :unprocessable_entity
     end
   end
 
@@ -44,6 +44,6 @@ class AdsController < ApplicationController
   private
 
   def ad_params
-    params.require(:ad).permit(:title, :description, :price, :category)
+    params.require(:ad).permit(:title, :description, :price, :category_id, gallery_images: [])
   end
 end
