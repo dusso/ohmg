@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2025_03_01_222939) do
+ActiveRecord::Schema[7.1].define(version: 2025_03_02_181357) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -58,6 +58,21 @@ ActiveRecord::Schema[7.1].define(version: 2025_03_01_222939) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "parent_id"
+    t.index ["parent_id"], name: "index_categories_on_parent_id"
+  end
+
+  create_table "category_fields", force: :cascade do |t|
+    t.bigint "category_id", null: false
+    t.string "name", null: false
+    t.integer "input_type", null: false
+    t.text "options", default: [], array: true
+    t.boolean "required", default: false
+    t.string "placeholder"
+    t.integer "order", default: 0
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_category_fields_on_category_id"
   end
 
   create_table "locations", force: :cascade do |t|
@@ -112,6 +127,7 @@ ActiveRecord::Schema[7.1].define(version: 2025_03_01_222939) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "ads", "categories"
   add_foreign_key "ads", "users"
+  add_foreign_key "category_fields", "categories"
   add_foreign_key "locations", "users"
   add_foreign_key "messages", "users"
   add_foreign_key "products", "users"

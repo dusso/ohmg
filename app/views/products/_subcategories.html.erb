@@ -1,0 +1,16 @@
+<% if subcategories.any? %>
+  <div class="field">
+    <label for="subcategory">Subcategoria</label>
+    <select id="subcategory" class="form-control" data-action="change->category-fields#loadSubcategories">
+      <option value="">Selecione uma subcategoria</option>
+      <% subcategories.each do |subcategory| %>
+        <option value="<%= subcategory.id %>"><%= subcategory.name %></option>
+      <% end %>
+    </select>
+  </div>
+  <div id="subcategory-container"></div>
+<% else %>
+  <script>
+    document.getElementById("product-fields").style.display = "block";
+  </script>
+<% end %>

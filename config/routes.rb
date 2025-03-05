@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users  # Rota para o Devise
-  
+
   root to: 'home#index'  # Página inicial será a listagem de produtos
 
   # Dashboard
@@ -20,6 +20,22 @@ Rails.application.routes.draw do
       delete 'remove_image', to: 'ads#remove_image'
     end
   end
+
+  # Products (Produtos)
+  resources :products do
+    collection do
+      get :dynamic_fields
+      get :load_subcategories
+    end
+  end
+
+  # Categories (Categorias)
+  resources :categorias, only: [:index] do
+    member do
+      get :subcategorias
+    end
+  end
+  
 
   # Messages (Mensagens)
   resources :messages, only: [:index, :show, :new, :create, :destroy]
@@ -43,7 +59,6 @@ Rails.application.routes.draw do
   get 'conditions', to: 'pages#conditions'
 
   # Ajustando rotas de locations que eram conflitantes
-  # Agora essas rotas são explicitamente definidas fora de 'resources :locations'
   get '/locations/new',    to: 'locations#new', as: :new_location
   post '/locations',       to: 'locations#create', as: :create_location
   patch '/locations/:id',  to: 'locations#update', as: :update_location
