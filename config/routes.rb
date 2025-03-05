@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   # Dashboard
   get 'dashboard', to: 'dashboard#show'
 
+  get "categories", to: "categories#index"
+
+
   # Account (usuário)
   resource :account, only: [:show, :edit, :update]
 

@@ -3,3 +3,13 @@
 @import "components/mixins"; 
 @import "components/styles"; 
 @import "components/buttons"; 
+
+
+.test-style {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 5px;
+}
