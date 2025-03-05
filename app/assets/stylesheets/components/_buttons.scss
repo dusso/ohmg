@@ -1,0 +1,666 @@
+//------------------------ only i ------------------------//
+
+
+//user icon
+i[class^="fi-rr-check"]::before {
+    color: $green;
+}
+
+//i[class^="fi-rr-shield-exclamation"]::before {
+//    ain menulor: $red;
+//}
+
+i[class^="fi-rr-search"]::before,
+i[class^="fi-rr-heart"]::before {
+    font-size: 1.2rem !important;
+}
+
+i[class^="fi-rr-interactive"]::before {
+    transform: rotate(90deg);
+}
+
+i[class^="bi bi-facebook"]::before,
+i[class^="bi bi-instagram"]::before {
+    font-size: 1.5rem !important;
+}
+
+._menu-dots-vertical::before {
+    color: $gold !important;
+}
+
+
+//--------------------------------------------------------//
+
+._transitions {
+    @include _transition;
+}
+
+
+._move-r {
+
+    &:hover {
+        @include _move-right($move-right);
+    }
+}
+
+._move-l {
+
+
+    &:hover {
+        @include _move-left($move-left);
+
+    }
+}
+
+._btn {
+    @include _body-btn;
+
+    &.__sm {
+        font-size: .7rem !important;
+    }
+
+    &.__md {
+        font-size: .8rem !important;
+    }
+}
+
+/* ._btn-dash {
+    @include _body-btn-dash;
+} */
+
+
+._nover {
+    transform: none !important;
+}
+
+
+
+//------------------------ specified ------------------------//
+
+
+
+._all-cat {
+    border: none !important;
+    border: 0 !important;
+
+    &.__white {
+        @include _transition;
+        border-bottom: 1px solid $gray100 !important;
+
+        a {
+            @include btn-style(2px, transparent, transparent, $gray800, none);
+        }
+
+        &:hover {
+            @include _transition;
+            background-color: #f8f9fa;
+
+            a {
+                @include _transition;
+                @include btn-style(2px, transparent, transparent, $blue, none);
+                text-shadow: 0 3.36px 8.896px #bae8ff;
+            }
+        }
+    }
+
+    &.__black {
+        @include _transition;
+        border-bottom: 1px solid $gray700 !important;
+
+        a {
+            @include btn-style(2px, transparent, transparent, $gray100, none);
+        }
+
+        &:hover {
+            @include _transition;
+            background-color: $gray800 !important;
+
+            a {
+                @include _transition;
+                @include btn-style(2px, transparent, transparent, $gold, none);
+                text-shadow: 0 3.36px 8.896px $black;
+            }
+        }
+    }
+}
+
+._create-ad {
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.__grad-orange {
+        @include btn-style(2px, $orange, $gradient-orange, $white, none);
+
+        &:hover {
+            @include btn-style(2px, $orange-dark, $gradient-orange, $white, $bs-orange);
+            transform: none !important;
+        }
+    }
+
+    &.__grad-gold {
+        @include btn-style(2px, none, $gradient-gold, $black, none);
+
+        &:hover {
+            @include btn-style(2px, none, $gradient-gold, $black, $bs-dark-gold);
+            transform: none !important;
+        }
+    }
+
+    &.__orange {
+        @include btn-style(2px, $orange, $orange, $white, none);
+
+        &:hover {
+            @include btn-style(2px, $orange-dark, $orange-dark, $white, $bs-orange);
+        }
+    }
+
+    &.__gold {
+        @include btn-style(2px, $gold, $gold, $black, none);
+
+        &:hover {
+            @include btn-style(2px, $gold, $black, $gold, $bs-dark-gold);
+        }
+    }
+}
+
+._languages {
+
+    button {
+        @include _body-btn;
+        padding: 0;
+    }
+
+    span {
+        margin: 0 .25rem;
+    }
+
+    &.__black {
+
+        button {
+            //style with button link
+            @include btn-style(1px, transparent, transparent, $black, none);
+
+            a {
+                color: $black !important;
+            }
+
+            &:hover {
+                @include btn-style(1px, transparent, transparent, $blue, none);
+                transform: none !important;
+            }
+        }
+    }
+
+    &.__gold {
+
+        span {
+            color: $gold;
+        }
+
+        button {
+            //style with button link
+            @include btn-style(1px, transparent, transparent, $gold, none);
+
+            a {
+                color: $gold !important;
+            }
+
+            &:hover {
+                @include btn-style(1px, transparent, transparent, $gold100, none);
+                transform: none !important;
+            }
+        }
+    }
+}
+
+._search {
+    position: relative;
+
+    input {
+        border-radius: 2rem 0 0 2rem !important;
+        padding-left: 2rem !important;
+
+        &:focus {
+            box-shadow: none !important;
+        }
+    }
+
+    button {
+        border-radius: 0 2rem 2rem 0 !important;
+    }
+
+    i {
+        z-index: 1000;
+    }
+
+    &.__blue,
+    &.__gold {
+        border-radius: 2rem;
+
+        &:hover {
+            transform: none;
+        }
+    }
+
+    &.__blue {
+        border: 2px solid $blue;
+
+        i {
+            color: $blue;
+        }
+
+        input,
+        button {
+            background-color: $white-page !important;
+        }
+
+        input {
+            color: $gray800 !important;
+            border: 1px solid $white-page;
+        }
+    }
+
+    &.__gold {
+        border: 2px solid $gold;
+
+        i {
+            color: $gold;
+        }
+
+        input,
+        button {
+            background-color: $black !important;
+        }
+
+        input {
+            color: $gray100 !important;
+            border: 1px solid $black;
+        }
+    }
+}
+
+//how it works - for guide website vitrine
+._hiw {
+    display: flex !important;
+    position: absolute !important;
+    top: 24px !important;
+    left: 9rem !important;
+}
+
+._btn-close {
+    @include _body-btn;
+}
+ 
+
+//------------------------ btn fill ------------------------//
+
+
+
+._gray200-fill {
+    @include btn-style(1px, transparent, $gray200, $white, $bs-black);
+
+    &:hover {
+        @include btn-style(1px, transparent, $gray300, $white, none);
+        transform: none !important;
+    }
+}
+
+._gray400-fill {
+    @include btn-style(1px, transparent, $gray400, $white, $bs-black);
+
+    &:hover {
+        @include btn-style(1px, transparent, $gray700, $white, none);
+        transform: none !important;
+    }
+}
+
+._black-fill {
+    @include btn-style(1px, transparent, $black, $gold, none);
+
+    &:hover {
+        @include btn-style(1px, transparent, $black, $gold, $bs-black);
+    }
+}
+
+._blue-fill {
+    @include btn-style(1px, transparent, $blue, $white, none);
+
+    &:hover {
+        @include btn-style(1px, transparent, $blue-dark, $white, $bs-blue);
+    }
+}
+
+._gold-fill {
+    @include btn-style(1px, transparent, $gold, $black, none);
+
+    &:hover {
+        @include btn-style(1px, transparent, $gold, $black, $bs-dark-gold);
+    }
+}
+
+._green-fill {
+    @include btn-style(1px, transparent, $green, $white, none);
+
+    &:hover {
+        @include btn-style(1px, transparent, $green, $white, $bs-green);
+    }
+}
+
+._orange-fill {
+    @include btn-style(1px, transparent, $orange, $white, none);
+
+    &:hover {
+        @include btn-style(1px, transparent, $orange, $white, $bs-orange);
+    }
+}
+
+._purple-fill {
+    @include btn-style(1px, transparent, $purple, $white, none);
+
+    &:hover {
+        @include btn-style(1px, transparent, $purple, $white, $bs-purple);
+    }
+}
+
+._red-fill {
+    @include btn-style(1px, transparent, $red, $white, none);
+
+    &:hover {
+        @include btn-style(1px, transparent, $red, $white, $bs-red);
+    }
+}
+
+._white-fill {
+    @include btn-style(1px, transparent, $white, $black, none);
+
+    a {
+        color: $black !important;
+    }
+
+    &:hover {
+        @include btn-style(1px, transparent, $white, $black, $bs-white);
+    }
+}
+
+
+
+//------------------------ btn oultine ------------------------//
+
+
+
+._black-outline {
+    @include btn-style(1px, $black, transparent, $black, none);
+
+    a {
+        color: $black !important;
+    }
+
+    &:hover {
+        @include btn-style(1px, $black, transparent, $black, $bs-black);
+    }
+}
+
+._blue-outline {
+    @include btn-style(1px, $blue, transparent, $blue, transparent);
+
+    a {
+        color: $blue !important;
+    }
+
+    &:hover {
+        @include btn-style(1px, $blue, transparent, $blue, $bs-blue);
+    }
+}
+
+._gray400-outline {
+    @include btn-style(1px, $gray400, transparent, $gray400, transparent);
+
+    a {
+        color: $gray900 !important;
+    }
+
+    &:hover {
+        @include btn-style(1px, $gray400, transparent, $gray900, $bs-black-a);
+    }
+}
+
+._gray500-outline {
+    @include btn-style(1px, $gray500, transparent, $gray500, transparent);
+
+    a {
+        color: $gray900 !important;
+    }
+
+    &:hover {
+        @include btn-style(1px, $gray500, transparent, $gray900, $bs-black-a);
+    }
+}
+
+._green-outline {
+    @include btn-style(1px, $green, transparent, $green, transparent);
+
+    a {
+        color: $green !important;
+    }
+
+    &:hover {
+        @include btn-style(1px, $green, transparent, $green, $bs-green);
+    }
+}
+
+._gold-outline {
+    @include btn-style(1px, $gold, transparent, $gold, transparent);
+
+    a {
+        color: $gold !important;
+    }
+
+    &:hover {
+        @include btn-style(1px, $gold, transparent, $gold, $bs-dark-gold);
+    }
+}
+
+._orange-outline {
+    @include btn-style(1px, $orange, transparent, $orange, transparent);
+
+    a {
+        color: $orange !important;
+    }
+
+    &:hover {
+        @include btn-style(1px, $orange, transparent, $orange, $bs-orange);
+    }
+}
+
+._purple-outline {
+    @include btn-style(1px, $purple, transparent, $purple, transparent);
+
+    a {
+        color: $purple !important;
+    }
+
+    &:hover {
+        @include btn-style(1px, $purple, transparent, $purple, $bs-purple);
+    }
+}
+
+._red-outline {
+    @include btn-style(1px, $red, transparent, $red, transparent);
+
+    a {
+        color: $red !important;
+    }
+
+    &:hover {
+        @include btn-style(1px, $red, transparent, $red, $bs-red);
+    }
+}
+
+._white-outline {
+    @include btn-style(1px, $white, transparent, $white, transparent);
+
+    a {
+        color: $white !important;
+    }
+
+    &:hover {
+        @include btn-style(1px, $white, transparent, $white, $bs-white);
+    }
+}
+
+
+
+//------------------------ btn links ------------------------//
+
+
+
+._black-link {
+    @include btn-style(1px, transparent, transparent, $black, none);
+
+    a {
+        color: $black !important;
+    }
+
+    &:hover {
+        @include btn-style(1px, transparent, transparent, $blue, none);
+        transform: none !important;
+    }
+}
+
+._blue-link {
+    @include btn-style(1px, transparent, transparent, $blue, none);
+
+    a {
+        color: $blue !important;
+    }
+
+    &:hover {
+        @include btn-style(1px, transparent, transparent, $blue-dark, none);
+        transform: none !important;
+    }
+}
+
+._gray100-link {
+    @include btn-style(1px, transparent, transparent, $gray100, none);
+
+    a {
+        color: $gray100 !important;
+    }
+
+    &:hover {
+        @include btn-style(1px, transparent, transparent, $white, none);
+        transform: none !important;
+    }
+}
+
+._gray500-link {
+    @include btn-style(1px, transparent, transparent, $gray500, none);
+
+    a {
+        color: $gray500 !important;
+    }
+
+    &:hover {
+        @include btn-style(1px, transparent, transparent, $black, none);
+        transform: none !important;
+    }
+}
+
+._gray800-link {
+    @include btn-style(1px, transparent, transparent, $gray800, none);
+
+    a {
+        color: $gray800 !important;
+    }
+
+    &:hover {
+        @include btn-style(1px, transparent, transparent, $black, none);
+        transform: none !important;
+    }
+}
+
+._gold100-link {
+    @include btn-style(1px, transparent, transparent, $gold100, none);
+
+    a {
+        color: $gold100 !important;
+    }
+
+    &:hover {
+        @include btn-style(1px, transparent, transparent, $gold, none);
+        transform: none !important;
+    }
+}
+
+._gold-link {
+    @include btn-style(1px, transparent, transparent, $gold, none);
+
+    a {
+        color: $gold !important;
+    }
+
+    &:hover {
+        @include btn-style(1px, transparent, transparent, $gold100, none);
+        transform: none !important;
+    }
+}
+
+._orange-link {
+    @include btn-style(1px, transparent, transparent, $orange, none);
+
+    a {
+        color: $orange !important;
+    }
+
+    &:hover {
+        @include btn-style(1px, transparent, transparent, $orange-dark, none);
+        transform: none !important;
+    }
+}
+
+._purple-link {
+    @include btn-style(1px, transparent, transparent, $purple, none);
+
+    a {
+        color: $purple !important;
+    }
+
+    &:hover {
+        @include btn-style(1px, transparent, transparent, $dark-purple, none);
+        transform: none !important;
+    }
+}
+
+._graytoblue-link {
+    @include btn-style(1px, transparent, transparent, $gray500, none);
+
+    a {
+        color: $gray500 !important;
+    }
+
+    &:hover {
+        @include btn-style(1px, transparent, transparent, $blue, none);
+        transform: none !important;
+    }
+}
+
+
+
+//------------------------ btn gradients ------------------------//
+
+
+
+
+////////////// Border //////////////
+.no-border {
+    border: none !important;
+}
+
+////////////// Sizes //////////////
+.small {
+    height: 1.5rem;
+    font-weight: 700;
+}

@@ -1,0 +1,38 @@
+<div data-controller="category-fields">
+  <div class="field">
+    <%= f.label :category_id, "Categoria Principal" %>
+    <%= f.collection_select :category_id, Category.where(parent_id: nil), :id, :name, { prompt: "Selecione uma categoria" }, class: "form-control", data: { action: "change->category-fields#loadSubcategories" } %>
+  </div>
+
+  <div id="subcategory-container" data-category-fields-target="subcategoryContainer"></div>
+</div>
+
+<!-- Campos do produto (inicialmente ocultos) -->
+<div id="product-fields" style="display: none;">
+  <h3>Detalhes do Produto</h3>
+
+  <div class="field">
+    <%= f.label :title, "Título do Produto" %>
+    <%= f.text_field :title, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description, "Descrição" %>
+    <%= f.text_area :description, class: "form-control" %>
+  </div>
+
+  <!-- Campos dinâmicos para categorias -->
+  <div id="dynamic-fields" data-category-fields-target="dynamicFields"></div>
+
+  <div class="field">
+    <%= f.label :price, "Preço" %>
+    <%= f.number_field :price, step: 0.01, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= f.submit "Salvar Produto", class: "btn btn-primary" %>
+  </div>
+</div>
+
+<!-- Dropdown para categorias no menu -->
+<ul id="category-menu" class="dropdown-menu"></ul>

@@ -1,4 +1,15 @@
-//@import "bootstrap";
-//@import 'bootstrap-icons/font/bootstrap-icons';
+@import "bootstrap/scss/bootstrap";
+@import "components/colors"; 
+@import "components/mixins"; 
+@import "components/styles"; 
+@import "components/buttons"; 
 
-@import 'bootstrap/scss/bootstrap';
+
+.test-style {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 5px;
+}

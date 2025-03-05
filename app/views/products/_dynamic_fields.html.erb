@@ -1,0 +1,28 @@
+<% fields.each do |field| %>
+  <div class="field">
+    <%= label_tag field.name, field.name.humanize %>
+    
+    <% if field.input_type == "text" %>
+      <%= text_field_tag field.name, nil, placeholder: field.placeholder, class: "form-control" %>
+
+    <% elsif field.input_type == "select" %>
+      <%= select_tag field.name, options_for_select(field.options), class: "form-control" %>
+
+    <% elsif field.input_type == "checkbox" %>
+      <% field.options.each do |option| %>
+        <div class="form-check">
+          <%= check_box_tag "#{field.name}[]", option, false, class: "form-check-input" %>
+          <%= label_tag "#{field.name}_#{option}", option, class: "form-check-label" %>
+        </div>
+      <% end %>
+
+    <% elsif field.input_type == "radio" %>
+      <% field.options.each do |option| %>
+        <div class="form-check">
+          <%= radio_button_tag field.name, option, false, class: "form-check-input" %>
+          <%= label_tag "#{field.name}_#{option}", option, class: "form-check-label" %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+<% end %>

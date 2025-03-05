@@ -1,0 +1,64 @@
+<div class="_dropdown">
+
+  <%# Logged %>
+  <% if current_user %>
+    <button onclick="myFunction()" class="dropbtn _btn _black-link px-0">
+      <%= "#{ current_user.username.capitalize }" %>
+      <i class="fi-rr-user _fs-12 dropbtn"></i>
+    </button>
+
+    <div id="myDropdown" class="_dropdown-content __white">
+
+      <span class="d-flex">
+        <i class="fi-rr-dashboard d-flex align-items-center mx-3"></i>
+        <%= link_to "My dashboard", dashboard_path, class: "d-flex flex-fill px-0" %>
+      </span>
+
+      <span class="d-flex">
+        <i class="fi-rr-info d-flex align-items-center mx-3"></i>
+        <%= link_to "help center", help_path, class: "d-flex flex-fill px-0" %>
+      </span>
+
+      <hr class="dropdown-divider my-1">
+      <span class="d-flex">
+        <i class="fi-rr-exit d-flex align-items-center mx-3"></i>
+        <%= link_to "Sign out", destroy_user_session_path, 
+        class:"d-flex flex-fill px-0 ", data: { turbo_method: :delete } %>
+      </span>
+
+    </div>
+
+  <% else %>
+
+    <!-- Logged off -->
+    <%= link_to new_user_session_path do %>
+      <button type="button" class="_btn _black-link p-0 ">
+        <div class="d-flex align-items-center">Login <i class="fi-rr-user _fs-12 ms-1"> </i></div>
+      </button>
+    <% end %>
+
+  <% end %>
+
+</div>
+
+<script>
+  /* When the user clicks on the button,
+  toggle between hiding and showing the dropdown content */
+  function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("_dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+</script>

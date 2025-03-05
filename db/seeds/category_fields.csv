@@ -1,0 +1,5 @@
+category,field_name,input_type,options,required,placeholder,order
+Clothing & Accessories,Size,select,XS,S,M,L,XL,TRUE,Choose a size,1
+Clothing & Accessories,Color,select,Red,Blue,Green,Black,White,FALSE,Select a color,2
+Jewelry & Watches,Material,select,Gold,Silver,Platinum,FALSE,Choose the material,1
+Health & Beauty,Expiration Date,date,,TRUE,Select an expiration date,1

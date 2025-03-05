@@ -1,0 +1,197 @@
+/////////////// surface colors for dark-theme ///////////////
+// o $black-surface talvez troque pelo $black
+
+$black-surface:                     #171717;
+$slvl1-outline:                     #424242;
+$slvl1:                             #2c2c2c;
+$slvl2:                             #272727;
+$slvl3:                             #303030;
+$slvl4:                             #333333;
+$slvl5:                             #3a3a3a;
+$slvl6:                             #3c3c3c;
+$slvl7:                             #414141;
+$slvl8:                             #454545;
+$slvl9:                             #474747;
+
+$slvl-a:                            rgba(255,255,255,0.15);
+
+
+$black:                             #242526; 
+$gray100:                           #E6E6E7;
+$gray100-a10:                       rgba(230,230,231,0.1);
+$gray100-a30:                       rgba(230,230,231,0.3);
+$gray100-a50:                       rgba(230,230,231,0.5);
+$gray200:                           #D2D2D2;
+$gray300:                           #BBBCBC; 
+$gray400:                           #A6A6A7;
+$gray500:                           #909091;
+$gray600:                           #7A7B7B;
+$gray700:                           #646565;
+$gray800:                           #4E4F50;
+$gray900:                           #393A3B;
+
+$blue-acqua:                        #23C1FD;
+$blue-dark:                         #0B28DE;
+$blue:                              #0063f6;
+$blue-header:                       #F0F8FF;
+$blue-slider:                       #F4FBFF;
+$blue100:                           #E3EDFC;
+$blue200:                           #CBDFFC;
+$blue300:                           #B1CFFB;
+$blue400:                           #98BFFA;
+$blue500:                           #7EAFF9;
+$blue600:                           #64A0F8;
+$blue700:                           #4B90F7;
+$blue800:                           #3281F6;
+$blue900:                           #1972F6;
+
+
+$white:                             #fff;
+$white-light:                       #F8F8F8;
+$white-page:                        #F0F2F4;
+
+$gold:                              #E2B871;
+$gold100:                           #fdefd6;
+$gold-a20:                          rgba(226,184,113,0.22);
+$gold500:                           #987C4C;
+$gold-dark:                         #926C2C; //#714C0C;
+
+// Refatorar daqui pra baixo
+$red:                               #FC340C;
+$red-a10:                           rgba(252,52,12,0.1);
+$yellow:                            #FDF400; //#FCEA0C;
+$green:                             #24b968; 
+$green-a10:                         rgba(36,185,104,0.1);
+$green-bar:                         #8EC318;
+
+$cat-b:                             #24b968;
+$cat-c:                             #2576b2;
+$cat-d:                             #091f85;
+$cat-e:                             #A17800;
+$cat-e-a10:                         rgba(161,120,0,0.1);
+$asd:                               #877848;
+$cat-g:                             #a50c27;
+$cat-h:                             #7bc0cf;
+$cat-i:                             #DB82D0;
+
+$cat-f:                             #f79E1d;
+$orange:                            #fd6517;
+$star-rating:                       #FC960C;
+$star-rating-a:                     #FFD9A6;
+$orange-pack:                       #FFFBF8;
+$orange-a15:                        rgba(253, 101, 23, 0.15);
+$orange-a5:                         rgba(253, 101, 23, 0.05);
+$orange-dark:                       #FC340C;
+
+$pink:                              #fe2fb5;
+$pink-dark:                         #E50D8A;
+$pink100:                           #EAB6BE;
+$pink200:                           #FF9FF3;
+
+$purple:                            #7217EE;
+$purple-a10:                        rgba(114,23,238,0.1);
+$purple200:                         #E2D2FB;
+$dark-purple:                       #5E04D9;
+
+$highlight:                         #FFD939;
+
+
+
+$border-color-category: linear-gradient(to right, $cat-f, $cat-g, $cat-i, $cat-d, $cat-c, $cat-h, $cat-b, $cat-e);
+
+
+
+//------------------------ gradients -----------------------//
+
+
+$gradient-black:     linear-gradient(to top, $black, $gray900);
+$gradient-dark-gray: linear-gradient(to bottom, $gray900, $black);
+
+$gradient-blue:      linear-gradient(to bottom, $blue, $blue-dark);
+$gradient-blue200:   linear-gradient(to bottom, $white, $blue200);
+$gradient-blue500:   linear-gradient(to top, $white, $blue300);
+
+$gradient-gold:      linear-gradient(to bottom, $gold, $gold-dark);
+
+$gradient-lemongreen: linear-gradient(to bottom, $green, $green-bar);
+
+$gradient-orange:    linear-gradient(to bottom, $orange, $orange-dark);
+
+$gradient-purple200: linear-gradient(to bottom, $white, $purple200);
+
+$gradient-white100:  linear-gradient(to bottom, $white, $gray100);
+$gradient-white:     linear-gradient(to bottom, $white, $gray300);
+
+
+
+//------------------------ box shadow ------------------------//
+
+
+
+////// for buttons //////
+$bs-black:                  rgba(36,37,37,0.8);
+$bs-black-plan:             rgba(205,205,205,0.8);
+$bs-black-a:                rgba(114, 114, 114, 0.8);
+$bs-blue:                   rgba(0,99,246,0.8);
+$bs-dark-blue:              rgba(0, 26, 240, 1);
+$bs-green:                  rgba(36,185,104,0.8);
+$bs-gold100:                rgba(253,239,214,0.8);                
+$bs-dark-gold:              rgba(218, 155, 46, 0.8);
+$bs-orange:                 rgba(253,101,23,0.8);
+$bs-purple:                 rgba(114,23,238,0.8);
+$bs-red:                    rgba(252,52,12,0.8);
+$bs-white:                  rgba(249,249,249,0.8);
+
+
+////// for input  //////
+$bs-input:                 1px 3px 10px -7px #999999; 
+$bs-input-blue:            1px 3px 10px -7px #0063f6; 
+
+$bs-input-orange:          1px 3px 10px -7px #fd6517; 
+
+$bs-input-gold:            1px 3px 10px -3px #E2B871; 
+$bs-input-gold-active:     1px 3px 12px -1px #E2B871;
+$bs-input-gold-a:          0px 0px  4px  1px #E2B871B3;
+
+$bs-input-black:           0px 0px  6px -1px #000;
+$bs-input-black-a:         0px 0px 17px -1px #00000030;
+
+
+////// for cards //////
+
+
+//$bs-promotion:             0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+//$bs-promotion-hover:       0 1rem 3rem rgba(0, 0, 0, 0.175);
+//$bs-hover:                 rgba(36,37,37,0.5);
+$bs-blue-hover:            -1px 5px 23px -3px #0063f680;
+$bs-gold-hover:            -1px 5px 23px -3px #E2B87180;
+//$bs-green-hover:           rgba(36,185,104,0.5);
+//$bs-orange-hover:          rgba(253,101,23,0.5);
+//$bs-highlight-hover:       rgba(255, 217, 57, 0.5);
+$bs-purple-hover:          -1px 5px 23px -3px #7217EE80;
+//$bs-top-hover:             rgba(252,150,12,0.5);
+
+
+$bs-card:                  -1px 14px 23px -3px rgba(114, 114, 114, 0.14);
+$bs-card-hover:             0px 0px 16px  -5px rgba(8, 8, 8, 0.55);
+
+//for black bg
+$bs-card-black:             0 0.2rem 0.6rem rgba(0, 0, 0, 0.62);
+ 
+
+ 
+
+// refatorar
+
+$box-shadow:        10px 10px 5px -5px rgba(114, 114, 114, .4);
+
+//--> only for premium (home/erotic)
+$blue-premium: -1px 9px 14px -5px rgba(162, 212, 240, 0.8);
+$blue-premium-hover: -1px 9px 14px -5px rgb(147, 195, 223);
+$black-premium: 0 .2rem .6rem rgba(21, 26, 29, 0.8);
+$black-premium-hover: .4rem .4rem 1rem .4rem rgba(21, 26, 29, .3);
+$gold-premium-inline: 12px 0px 24px 2px rgba(240, 211, 162, 0.4);
+
+
+ 
+ 

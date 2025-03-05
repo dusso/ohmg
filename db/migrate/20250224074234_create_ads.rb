@@ -4,10 +4,10 @@ class CreateAds < ActiveRecord::Migration[7.1]
       t.string :title
       t.text :description
       t.decimal :price
-      t.string :category
+      t.references :category, foreign_key: true # Corrigido para relacionamento correto
       t.references :user, foreign_key: true
-
+  
       t.timestamps
     end
-  end
+  end  
 end

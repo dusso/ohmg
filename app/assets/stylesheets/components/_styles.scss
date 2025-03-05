@@ -1,0 +1,874 @@
+//------------------------ bg specified -----------------------//
+
+
+._bg-chat {
+  background-color: #ffffff;
+  opacity: 1;
+  background-image: radial-gradient(#0063f6 0.75px, #ffffff 0.75px);
+  background-size: 18px 18px;
+}
+
+
+//------------------------ bg gradient -----------------------//
+
+
+._bg-grad-black {
+  background: $gradient-black;
+}
+
+._bg-grad-blue {
+  background: $gradient-blue;
+}
+
+._bg-grad-orange {
+  background: $gradient-orange;
+}
+
+._bg-grad-gold {
+  background: $gradient-gold;
+}
+
+
+//------------------------ backgrounds -----------------------//
+
+._bg-none {
+  background-color: transparent !important;
+  background: transparent !important;
+}
+
+._bg-100 {
+  background-color: $gray100 !important;
+}
+
+._bg-200 {
+  background-color: $gray200 !important;
+}
+
+._bg-300 {
+  background-color: $gray300 !important;
+}
+
+._bg-400 {
+  background-color: $gray400 !important;
+}
+
+._bg-500 {
+  background-color: $gray500 !important;
+}
+
+._bg-600 {
+  background-color: $gray600 !important;
+}
+
+._bg-700 {
+  background-color: $gray700 !important;
+}
+
+._bg-800 {
+  background-color: $gray800 !important;
+}
+
+._bg-900 {
+  background-color: $gray900 !important;
+}
+
+._bg-slvl1 {
+  background-color: $slvl1 !important;
+}
+
+._bg-black {
+  background-color: $black !important;
+}
+
+._bg-black-a5 {
+  background-color: $gray100-a50 !important;
+}
+
+._bg-black-page {
+  background-color: $black-surface !important;
+}
+
+._bg-blue-header {
+  background-color: $blue-header !important;
+}
+
+._bg-blue {
+  background-color: $blue !important;
+}
+
+._bg-blue-slider {
+  background-color: $blue-slider !important;
+}
+
+._bg-blue100 {
+  background: $blue100 !important;
+}
+
+._bg-blue200 {
+  background: $blue200 !important;
+}
+
+._bg-blue300 {
+  background: $blue300 !important;
+}
+
+._bg-dark-gray {
+  background-color: $gray900;
+}
+
+._bg-gold-100 {
+  background-color: $gold100;
+}
+
+._bg-gold {
+  background: $gold !important;
+}
+
+._bg-gray-900 {
+  background: $gray900 !important;
+}
+
+._bg-green {
+  background: $cat-b !important;
+}
+
+._bg-green-bar {
+  background: $green-bar !important;
+}
+
+._bg-green-moss {
+  background: $cat-e !important;
+}
+
+._bg-dark-orange {
+  background-color: $orange-dark;
+}
+
+._bg-orange {
+  background-color: $orange;
+}
+
+._bg-orange-pack {
+  background-color: $orange-pack;
+}
+
+._bg-orange-a15 {
+  background-color: $orange-a15;
+}
+
+._bg-purple {
+  background: $purple !important;
+}
+
+._bg-pumpkin {
+  background: $star-rating !important;
+}
+
+._bg-red {
+  background: $red !important;
+}
+
+._bg-slvl-a {
+  background: $slvl-a !important;
+}
+
+._bg-slvl1 {
+  background: $slvl1 !important;
+}
+
+._bg-slvl2 {
+  background: $slvl2 !important;
+}
+
+._bg-slvl3 {
+  background: $slvl3;
+}
+
+._bg-white {
+  background-color: $white;
+}
+
+._bg-white-light {
+  background-color: $white-light;
+}
+
+._bg-white-page {
+  background-color: $white-page !important;
+}
+
+._bg-yellow {
+  background: $yellow !important;
+}
+
+
+
+//------------------------ border -----------------------//
+
+
+// Refatorados
+._nodisplay {
+  display: none !important;
+}
+
+._b-none {
+  border: none !important;
+  border: 0 !important;
+}
+
+._b-rainbow {
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(to right, $yellow, $orange, $pink100, $pink, #DE1ED2, $blue, #009EF0, $green, $cat-e);
+  border-image-slice: 1;
+}
+
+._b-100 {
+  border: 1px solid $gray100 !important;
+}
+
+._b-200 {
+  border: 1px solid $gray200 !important;
+}
+
+._b-400 {
+  border: 1px solid $gray400 !important;
+}
+
+._b-500 {
+  border: 1px solid $gray500 !important;
+}
+
+._b-600 {
+  border: 1px solid $gray600 !important;
+}
+
+._b-700 {
+  border: 1px solid $gray700 !important;
+}
+
+._b-800 {
+  border: 1px solid $gray800 !important;
+}
+
+._b-blue {
+  border: 1px solid $blue !important;
+}
+
+._b-blue-2 {
+  border: 2px solid $blue !important;
+}
+
+._b-gold-2 {
+  border: 2px solid $gold !important;
+}
+
+._b-gold {
+  border: 1px solid $gold;
+}
+
+._b-green {
+  border: 1px solid $green;
+}
+
+._b-white-2 {
+  border: 2px solid $white;
+}
+
+._b-white-4 {
+  border: 4px solid $white;
+}
+
+
+
+._bt-200 {
+  border-top: 1px solid $gray200 !important;
+}
+
+._bt-600 {
+  border-top: 1px solid $gray600 !important;
+}
+
+._bt-800 {
+  border-top: 1px solid $gray800 !important;
+}
+
+._bt-900 {
+  border-top: 1px solid $gray800 !important;
+}
+
+._bt-gold {
+  border-top: 1px solid $gold !important;
+}
+
+
+
+._br-100 {
+  border-right: 1px solid $gray100 !important;
+}
+
+._br-200 {
+  border-right: 1px solid $gray200 !important;
+}
+
+._br-600 {
+  border-right: 1px solid $gray600 !important;
+}
+
+._br-800 {
+  border-right: 1px solid $gray800 !important;
+}
+
+._br-900 {
+  border-right: 1px solid $gray900 !important;
+}
+
+._br-gold {
+  border-right: 1px solid $gold !important;
+}
+
+
+
+._bb-100 {
+  border-bottom: 1px solid $gray100 !important;
+}
+
+._bb-200 {
+  border-bottom: 1px solid $gray200 !important;
+}
+
+._bb-800 {
+  border-bottom: 1px solid $gray800 !important;
+}
+
+._bb-900 {
+  border-bottom: 1px solid $gray900 !important;
+}
+
+._bb-600 {
+  border-bottom: 1px solid $gray600 !important;
+}
+
+._bb-blue {
+  border-bottom: 1px solid $blue !important;
+}
+
+._bb-blue-2 {
+  border-bottom: 2px solid $blue;
+}
+
+._bb-orange {
+  border-bottom: 1px solid $orange;
+}
+
+._bb-gold {
+  border-bottom: 1px solid $gold !important;
+}
+
+._bb-gold-2 {
+  border-bottom: 2px solid $gold !important;
+}
+
+
+._bx-100 {
+  border-right: 1px solid $gray100 !important;
+  border-left: 1px solid $gray100 !important;
+}
+
+
+
+._btb-100 {
+  border-top: 1px solid $gray100 !important;
+  border-bottom: 1px solid $gray100 !important;
+}
+
+._btb-200 {
+  border-top: 1px solid $gray200 !important;
+  border-bottom: 1px solid $gray200 !important;
+}
+
+._btb-800 {
+  border-top: 1px solid $gray800 !important;
+  border-bottom: 1px solid $gray800 !important;
+}
+
+._btb-900 {
+  border-top: 1px solid $gray900 !important;
+  border-bottom: 1px solid $gray900 !important;
+}
+
+
+
+//------------------------ Border Radius -----------------------//
+
+
+
+._radius-0 {
+  border-radius: 0rem !important;
+}
+
+._radius {
+  border-radius: 1rem !important;
+}
+
+._radius-2 {
+  border-radius: 2rem !important;
+}
+
+._radius-tbl {
+  border-top-left-radius: 1rem !important;
+  border-bottom-left-radius: 1rem !important;
+}
+
+._radius-tbr {
+  border-top-right-radius: 1rem !important;
+  border-bottom-right-radius: 1rem !important;
+}
+
+._radius-tlr {
+  border-top-left-radius: 1rem !important;
+  border-top-right-radius: 1rem !important;
+}
+
+._radius-tlr-2 {
+  border-top-left-radius: 2rem !important;
+  border-top-right-radius: 2rem !important;
+}
+
+._radius-blr-0 {
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+._radius-blr {
+  border-bottom-left-radius: 1rem !important;
+  border-bottom-right-radius: 1rem !important;
+}
+
+
+
+//------------------------ font size -----------------------//
+
+
+
+._fs-small {
+  font-size: small !important;
+}
+
+._fs-05 {
+  font-size: 0.5rem !important;
+}
+
+._fs-06 {
+  font-size: 0.6rem !important;
+}
+
+._fs-07 {
+  font-size: 0.7rem !important;
+}
+
+._fs-075 {
+  font-size: 0.75rem !important;
+}
+
+._fs-08 {
+  font-size: 0.8rem !important;
+}
+
+._fs-09 {
+  font-size: 0.9rem !important;
+}
+
+._fs-10 {
+  font-size: 1rem !important;
+}
+
+._fs-11 {
+  font-size: 1.1rem !important;
+}
+
+._fs-12 {
+  font-size: 1.2rem !important;
+}
+
+._fs-13 {
+  font-size: 1.3rem !important;
+}
+
+._fs-14 {
+  font-size: 1.4rem !important;
+}
+
+._fs-15 {
+  font-size: 1.5rem;
+}
+
+._fs-20 {
+  font-size: 2rem;
+}
+
+._fs-25 {
+  font-size: 2.5rem;
+}
+
+._fs-italic {
+  font-style: italic;
+}
+
+
+//------------------------ font weight -----------------------//
+
+
+
+._fw-bold {
+  font-weight: bold !important;
+}
+
+._fw-200 {
+  font-weight: 200 !important;
+}
+
+._fw-300 {
+  font-weight: 300 !important;
+}
+
+._fw-400 {
+  font-weight: 400 !important;
+}
+
+._fw-500 {
+  font-weight: 500 !important;
+}
+
+._fw-600 {
+  font-weight: 600 !important;
+}
+
+
+
+//------------------------ text properties -----------------------//
+
+
+
+._txt-100 {
+  color: $gray100 !important;
+}
+
+._txt-200 {
+  color: $gray200 !important;
+}
+
+._txt-300 {
+  color: $gray300 !important;
+}
+
+._txt-400 {
+  color: $gray400 !important;
+}
+
+._txt-500 {
+  color: $gray500 !important;
+}
+
+._txt-600 {
+  color: $gray600 !important;
+}
+
+._txt-700 {
+  color: $gray700 !important;
+}
+
+._txt-800 {
+  color: $gray800 !important;
+}
+
+._txt-900 {
+  color: $gray900 !important;
+}
+
+._txt-black {
+  color: $black !important;
+}
+
+._txt-blue {
+  color: $blue !important;
+}
+
+._txt-blue-acqua {
+  color: $blue-acqua !important;
+}
+
+._txt-blue-200 {
+  color: $blue200 !important;
+}
+
+._txt-blue-900 {
+  color: $blue900 !important;
+}
+
+._txt-dark-gray {
+  color: $gray900 !important;
+}
+
+._txt-dark-white {
+  color: $gray100-a50 !important;
+}
+
+._txt-gold {
+  color: $gold !important;
+}
+
+._txt-gold-100 {
+  color: $gold100 !important;
+}
+
+._txt-green {
+  color: $cat-b !important;
+}
+
+._txt-green-bar {
+  color: $green-bar !important;
+}
+
+._txt-green-moss {
+  color: $cat-e !important;
+}
+
+._txt-highlight {
+  color: $highlight !important;
+}
+
+._txt-orange {
+  color: $orange !important;
+}
+
+._txt-purple {
+  color: $purple !important;
+}
+
+._txt-rating {
+  color: $star-rating !important;
+}
+
+._txt-rating-a {
+  color: $star-rating-a !important;
+}
+
+._txt-red {
+  color: $red !important;
+}
+
+._txt-vitrine {
+  color: $purple !important;
+}
+
+._txt-white {
+  color: $white;
+}
+
+._txt-grad-blue {
+  background: $blue;
+  background: -webkit-linear-gradient(to bottom, $blue 0%, $blue-dark 100%);
+  background: -moz-linear-gradient(to bottom, $blue 0%, $blue-dark 100%);
+  background: linear-gradient(to bottom, $blue 0%, $blue-dark 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+._txt-up {
+  text-transform: uppercase !important;
+}
+
+._txt-low {
+  text-transform: lowercase !important;
+}
+
+._txt-cap {
+  text-transform: capitalize !important;
+}
+
+._txt-none {
+  text-transform: none !important;
+}
+
+._txt-decoration-none {
+  text-decoration: none;
+}
+
+._txt-none {
+  text-transform: none !important;
+}
+
+._txt-left {
+  text-align: left !important;
+}
+
+
+
+//------------------------ height -----------------------//
+
+
+
+._height-3 {
+  height: 3rem;
+}
+
+._height-4 {
+  height: 4rem;
+}
+
+._height-95 {
+  height: 9.5rem;
+}
+
+._height-10 {
+  height: 10rem;
+}
+
+._height-13 {
+  height: 13rem;
+}
+
+
+
+//------------------------ line height -----------------------//
+
+
+
+._lh-12 {
+  line-height: 1.2;
+}
+
+._lh-14 {
+  line-height: 1.4;
+}
+
+._lh-20 {
+  line-height: 2.5;
+}
+._lh-25 {
+  line-height: 2.5;
+}
+
+
+
+//------------------------ list style -----------------------//
+
+
+
+._ls-none {
+  list-style: none !important;
+  list-style-type: none !important;
+ //padding: 0;
+}
+
+
+
+//------------------------ max-width -----------------------//
+
+
+
+._max-width-lg {
+  max-width: 1197px !important;
+}
+
+._max-width-md {
+  max-width: 768px !important;
+}
+
+
+
+//------------------------ image -----------------------//
+
+
+
+._object-fit-cover {
+  object-fit: cover;
+}
+
+._object-fit-scale-down {
+  object-fit: scale-down;
+}
+
+
+
+//------------------------ shadow -----------------------//
+
+
+
+._bs-outline {
+  box-shadow: 0px 0px 0px 3px #fff;
+}
+
+._bs-black {
+  box-shadow: 0 0.5rem 1rem $black-surface;
+}
+
+._shadow-page {
+  box-shadow: 0px 3px 10px -6px rgba(0, 0, 0, 0.5);
+}
+
+._shadow {
+  box-shadow: $bs-card;
+  -webkit-box-shadow: $bs-card;
+  -moz-box-shadow: $bs-card;
+}
+
+._noshadow {
+  box-shadow: transparent !important;
+  moz-box-shadow: transparent !important;
+  -o-box-shadow: transparent !important;
+  -webkit-box-shadow: transparent !important;
+}
+
+
+
+//------------------------ general -----------------------//
+
+
+
+._vh {
+  height: 100vh;
+}
+
+// using in menu mobile
+._64vh {
+  height: 64vh !important;
+}
+
+._c-pointer {
+  cursor: pointer;
+}
+
+._fx-none {
+  transform: none !important;
+}
+
+._mark {
+  background-color: #ffe14d !important;
+  padding: .2rem .4rem;
+}
+
+._mp-0 {
+  p {
+    margin: 0 !important;
+  }
+}
+
+._mli li {
+  margin-bottom: 1rem;
+}
+
+._white-space-none {
+  white-space: normal !important;
+}
+
+
+
+//------------------------ position -----------------------//
+
+._absolute {
+  position: absolute !important;
+}
+
+._relative {
+  position: relative !important;
+}

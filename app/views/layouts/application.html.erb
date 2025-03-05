@@ -9,7 +9,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "application-#{Rails.application.config.assets.digest}.css", media: "all", "data-turbo-track": "reload", rel: "stylesheet" %>
     <%#= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
     <%#= javascript_include_tag "application", "data-turbo-track": "reload" %>
 
@@ -18,9 +18,15 @@
     
 
     <%#= javascript_importmap_tags %>
+    <%= javascript_importmap_tags %>
   </head>
 
   <body>
     <%= yield %>
   </body>
+
+  <div class="test-style">
+  Se você está vendo isso com fundo azul, o SCSS está funcionando! 🚀
+  </div>
+
 </html>

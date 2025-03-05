@@ -1,0 +1,19 @@
+<h1><%= @ad.title %></h1>
+
+<p><strong>Descrição:</strong> <%= @ad.description %></p>
+<p><strong>Preço:</strong> CHF <%= @ad.price %></p>
+<p><strong>Categoria:</strong> <%= @ad.category.name if @ad.category %></p>
+<p><strong>Publicado por:</strong> <%= @ad.user.email if @ad.user %></p>
+
+<h2>Imagens</h2>
+<% if @ad.gallery_images.attached? %>
+  <% @ad.gallery_images.each do |image| %>
+    <div>
+      <%= image_tag image, width: 300, height: 200 %>
+    </div>
+  <% end %>
+<% else %>
+  <p>Este anúncio ainda não tem imagens.</p>
+<% end %>
+
+<%= link_to "Voltar para os anúncios", ads_path %>
